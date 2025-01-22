@@ -1,0 +1,143 @@
+@import 'fonts.css';
+@import '../../node_modules/animate.css/animate.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black dark:bg-ghostwhite font-intertight;
+  }
+  .wrapper-outside {
+    @apply min-h-screen bg-blacklight dark:bg-white mx-auto border-s border-e dark:border-s-[#f3f4f6] border-s-borderlight dark:border-e-[#f3f4f6] border-e-borderlight w-full sm:w-2/5 ps-2 pe-2 sm:ps-16 sm:pe-16;
+  }
+  .wrapper-inside {
+    @apply grow;
+  }
+  header {
+    @apply pt-6;
+  }
+  header .intro {
+    @apply flex flex-col justify-center items-center;
+  }
+  header .intro img {
+    @apply rounded-full mb-4;
+  }
+  header .intro .details .name {
+    @apply font-intertight text-center dark:text-black text-white uppercase text-xl font-bold;
+  }
+  header .intro .details .info {
+    @apply font-intertight text-center mt-1 text-[#9ca3af] text-sm;
+  }
+  header .intro .action {
+    @apply mt-5;
+  }
+  header .intro .action a {
+    @apply font-intertight text-center mt-5 text-[#9ca3af] text-sm bg-darkslategray py-2 px-2.5 rounded-3xl;
+  }
+  main {
+    @apply pt-6 pb-12;
+  }
+
+  /* EXPERIENCE start */
+  main section#experience {
+    @apply mt-6;
+  }
+  main section#experience h1 {
+    @apply font-intertight dark:text-black text-white font-bold;
+  }
+  main section#experience > div > article {
+    @apply rounded-md py-4 px-6 odd:bg-[#1b2432] dark:odd:bg-whitesmoke mt-5;
+  }
+  main section#experience > div > article h1 {
+    @apply font-intertight text-base text-white mb-3;
+  }
+  main section#experience > div > article p {
+    @apply font-intertight text-sm text-[#9ca3af] leading-5;
+  }
+  main section#experience > div > article .icon {
+    @apply text-red-500 flex justify-center items-center w-10 h-10 border border-[#4b5563a6] bg-darkslategray rounded-full;
+  }
+  /* EXPERIENCE end */
+
+  /* PORTFOLIO start */
+  main section#portfolio {
+    @apply mt-6;
+  }
+  main section#portfolio h1 {
+    @apply font-intertight dark:text-black text-white font-bold;
+  }
+  main section#portfolio > div {
+    @apply mt-6 grid grid-cols-2 gap-5;
+  }
+  main section#portfolio > div > div {
+    @apply relative;
+  }
+  main section#portfolio > div > div > h1 {
+    @apply absolute bottom-3 left-5 z-50;
+  }
+  main section#portfolio > div > div img {
+    @apply w-full h-44 rounded-lg col-span-2 sm:col-span-1;
+  }
+  /* PORTFOLIO end */
+
+  /* RECOMMENDATIONS start */
+  main section#recommendations {
+    @apply mt-6;
+  }
+  main section#recommendations h1 {
+    @apply font-intertight dark:text-black text-white font-bold;
+  }
+  main section#recommendations article {
+    @apply rounded-md py-4 px-6 odd:bg-[#1b2432] dark:odd:bg-whitesmoke;
+  }
+  main section#recommendations article h1 {
+    @apply font-intertight text-base text-white;
+  }
+  main section#recommendations article h3 {
+    @apply font-intertight text-sm text-gray-500 mb-3;
+  }
+  main section#recommendations article p {
+    @apply font-intertight text-sm text-[#9ca3af] leading-5;
+  }
+  main section#recommendations article .icon {
+    @apply text-red-500 flex justify-center items-center w-10 h-10 border border-[#4b5563a6] bg-darkslategray rounded-full;
+  }
+  main section#recommendations article .website {
+    @apply text-red-500 mt-3 font-bold;
+  }
+  @keyframes ticker {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .animate-ticker {
+    animation: ticker 10s linear infinite;
+  }
+  /* RECOMMENDATIONS end */
+
+  footer {
+    @apply pb-14;
+  }
+  footer .logo {
+    @apply flex justify-center items-center;
+  }
+  footer .social {
+    @apply pt-14 flex justify-center items-center;
+  }
+  footer .social ul {
+    @apply flex flex-row;
+  }
+  footer .social ul li {
+    @apply me-2;
+  }
+  footer .social ul li a {
+    @apply flex justify-center items-center w-8 h-8 text-[#9ca3af] border border-[#4b5563a6] bg-darkslategray rounded-full;
+  }
+  footer p {
+    @apply mt-6 text-[#4b5563] text-center text-sm;
+  }
+}
