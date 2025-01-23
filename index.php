@@ -1,8 +1,4 @@
-<?php
 
-$portfolio = require(src/portfolio.php);
-
-?>
 
 <!DOCTYPE html>
 <html>
