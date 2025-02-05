@@ -6,32 +6,7 @@
     <script src="./assets/js/layout.js"></script>
     <link href="./assets/css/layout.compiled.css" rel="stylesheet" />
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <title>Alexander Bergmann</title>
-    <script>
-      // Wähle das Element aus, das beobachtet werden soll
-      const animatedElement = document.querySelector('#animatedElement');
-
-      // Erstelle den Observer
-      const observer = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              // Füge die Animation hinzu, wenn das Element sichtbar wird
-              entry.target.classList.add('animate__animated', 'animate__bounceOutLeft');
-              // Stoppe das Beobachten, wenn die Animation gestartet wurde
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        {
-          threshold: 0.5, // Sichtbarkeitsgrenze: 50% des Elements müssen sichtbar sein
-        }
-      );
-
-      // Starte das Beobachten
-      observer.observe(animatedElement);
-    </script>
   </head>
   <body>
     <div class="wrapper-outside">
@@ -54,10 +29,10 @@
             </div>
           </div>
           <div class="intro">
-            <img class="evarioo" src="./assets/images/evarioo.jpg" width="62" height="62" alt="evarioo" />
+            <img class="evarioo" src="./assets/images/evarioo.jpg" width="125" height="125" alt="evarioo" />
             <div class="details">
               <h1 class="name">Alexander Bergmann</h1>
-              <p class="info">Webentwicklung: Mein Hobby, deine Vision.</p>
+              <p class="info">Code, Content & Chaos – Webentwicklung mit Biss und Linux im Herzen!</p>
             </div>
             <div class="action animate__animated animate__fadeInDown">
               <a href="#">Freelancer</a>
@@ -73,7 +48,7 @@
                 <div class="flex flex-row gap-5">
                   <div>
                     <div class="icon">
-                      <i class="fa-solid fa-hexagon-nodes fa-lg"></i>
+                      <i class="fa-solid fa-file-code fa-lg"></i>
                     </div>
                   </div>
                   <div>
@@ -99,7 +74,7 @@
                 <div class="flex flex-row gap-5">
                   <div>
                     <div class="icon">
-                      <i class="fa-brands fa-linux fa-lg"></i>
+                      <i class="fa-solid fa-cubes fa-lg"></i>
                     </div>
                   </div>
                   <div>
@@ -116,11 +91,11 @@
             <div>
               <div class="animate__animated animate__zoomIn">
                 <h1>Lorem Ipsum</h1>
-                <img src="https://preview.cruip.com/devfolio/images/tutorial-01.jpg" />
+                <img src="./assets/images/references/1.jpg" />
               </div>
               <div class="animate__animated animate__zoomIn">
                 <h1>Lorem Ipsum</h1>
-                <img src="https://preview.cruip.com/devfolio/images/tutorial-01.jpg" />
+                <img src="./assets/images/references/2.jpg" />
               </div>
             </div>
           </section>
@@ -147,18 +122,18 @@
           </div>
           <div class="social">
             <ul>
-              <li id="animatedElement">
-                <a href="#">
+              <li>
+                <a href="https://github.com/pixelpatron90">
                   <i class="fa-brands fa-github"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <i class="fa-brands fa-facebook-f"></i>
+                <a href="https://x.com/pixelpatron">
+                  <i class="fa-brands fa-x-twitter"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://discord.com/channels/@me/1178035028249297058/">
                   <i class="fa-brands fa-discord"></i>
                 </a>
               </li>
@@ -168,6 +143,7 @@
         </footer>
       </div>
     </div>
+
     <script src="./assets/js/darklight.js"></script>
     <script src="./assets/js/carousel.js"></script>
   </body>
