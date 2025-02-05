@@ -1,0 +1,94 @@
+<section id="recommendations">
+            <h1>Empfehlungen</h1>
+            <div class="mt-6">
+              <div x-data="carousel()" x-init="startAutoplay()" class="relative w-full max-w-3xl overflow-hidden">
+                <!-- Slides -->
+                <div class="flex transition-transform duration-500 ease-out" :style="`transform: translateX(-${currentIndex * 100}%)`">
+                  <div class="w-full flex-shrink-0">
+                    <article>
+                      <div class="flex flex-row gap-5">
+                        <div>
+                          <div class="icon">
+                            <i class="fa-solid fa-hexagon-nodes fa-lg"></i>
+                          </div>
+                        </div>
+                        <div>
+                          <h1>Thorsten</h1>
+                          <h3>Inhaber von www.mygserv.de</h3>
+                          <p>Alexander hat in einem anspruchsvollen Sponsoring-Projekt seine technischen Fähigkeiten erfolgreich eingebracht und maßgeblich zum Erfolg beigetragen. Als Techniker übernahm er die Verantwortung für die technische Umsetzung und Betreuung, wobei er stets professionell, zuverlässig und zielorientiert arbeitete.</p>
+                          <p class="website">
+                            <i class="fa-solid fa-link me-2"></i>
+                            www.mygserv.de
+                          </p>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="w-full flex-shrink-0">
+                    <article>
+                      <div class="flex flex-row gap-5">
+                        <div>
+                          <div class="icon">
+                            <i class="fa-solid fa-hexagon-nodes fa-lg"></i>
+                          </div>
+                        </div>
+                        <div>
+                          <h1>Thorsten</h1>
+                          <h3>Inhaber von www.mygserv.de</h3>
+                          <p>Alexander hat in einem anspruchsvollen Sponsoring-Projekt seine technischen Fähigkeiten erfolgreich eingebracht und maßgeblich zum Erfolg beigetragen. Als Techniker übernahm er die Verantwortung für die technische Umsetzung und Betreuung, wobei er stets professionell, zuverlässig und zielorientiert arbeitete.</p>
+                          <p class="website">
+                            <i class="fa-solid fa-link me-2"></i>
+                            www.mygserv.de
+                          </p>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="w-full flex-shrink-0">
+                    <article>
+                      <div class="flex flex-row gap-5">
+                        <div>
+                          <div class="icon">
+                            <i class="fa-solid fa-hexagon-nodes fa-lg"></i>
+                          </div>
+                        </div>
+                        <div>
+                          <h1>Thorsten</h1>
+                          <h3>Inhaber von www.mygserv.de</h3>
+                          <p>Alexander hat in einem anspruchsvollen Sponsoring-Projekt seine technischen Fähigkeiten erfolgreich eingebracht und maßgeblich zum Erfolg beigetragen. Als Techniker übernahm er die Verantwortung für die technische Umsetzung und Betreuung, wobei er stets professionell, zuverlässig und zielorientiert arbeitete.</p>
+                          <p class="website">
+                            <i class="fa-solid fa-link me-2"></i>
+                            www.mygserv.de
+                          </p>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+              <script>
+                function carousel() {
+                  return {
+                    slides: [1, 2, 3],
+                    currentIndex: 0,
+                    interval: null,
+                    startAutoplay() {
+                      this.interval = setInterval(() => {
+                        this.next();
+                      }, 5000);
+                    },
+                    stopAutoplay() {
+                      clearInterval(this.interval);
+                    },
+                    next() {
+                      this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+                    },
+                    goTo(index) {
+                      this.currentIndex = index;
+                    },
+                  };
+                }
+              </script>
+            </div>
+          </section>
